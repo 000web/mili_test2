@@ -1,0 +1,227 @@
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* IMPORTANT FOR MOBILE VISUALIZATION */
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0
+}
+
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* PRODUCT NAME FORMATTING */
+h1{
+    background-color: #808080;
+    color: white;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+    border-radius: 1rem;
+    border: white solid 3px;
+    box-shadow: 6px 6px 2px #808080;
+}
+
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* PRODUCT DATA FORMATTING */
+table{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+table, tr, td, th{
+    border-collapse: collapse;
+    /*border: black solid 1px;*/
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.normal{
+    font-weight: 900;
+    font-size: 1rem;
+}
+.small{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.price{
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+.price_indication{
+    border-radius: 0.5rem;
+    background-color: black;
+    width: fit-content;
+    color: white;
+}
+
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* PRODUCT 1: CERVEZA */
+/* 0000000 +++ +++ */
+/* 0000000 +++ +++ */
+#p1{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 9fr 6fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "p1_data p1_images";
+    grid-gap: 0.5rem;
+    font-family: Poppins;
+    width: 100%;
+}
+#p1_data{
+    grid-area: p1_data;
+    background: white;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+#p1_images{
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    grid-template-areas:
+    "p1_i1 p1_i2"
+    "p1_i3 p1_i4";
+    grid-gap: 0rem;
+    background: #e5e5e5;
+    border-radius: 20px;
+    text-align: center;
+}
+#p1_i1{
+    grid-area: p1_i1;
+    text-align: center;
+    /*border-color: crimson;*/
+    /*border-style: solid;*/
+    /*background: #a5a5a5;*/
+    /*border-radius: 20px;*/
+}
+#p1_i2{
+    grid-area: p1_i2;
+    text-align: center;
+    /*border-color: crimson;*/
+    /*border-style: solid;*/
+    /*background: #a5a5a5;*/
+    /*border-radius: 20px;*/
+}
+#p1_i3{
+    grid-area: p1_i3;
+    text-align: center;
+    /*border-color: crimson;*/
+    /*border-style: solid;*/
+    /*background: #a5a5a5;*/
+    /*border-radius: 20px;*/
+}
+#p1_i4{
+    grid-area: p1_i4;
+    text-align: center;
+    /*border-color: crimson;*/
+    /*border-style: solid;*/
+    /*background: #a5a5a5;*/
+    /*border-radius: 20px;*/
+}
+.image_common{
+    width: 95%;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************** */
+/* ********************************** */
+/* ********************************** */
+/* REACTIVITY */
+@media only screen and (max-width: 1000px){
+    #p1{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 12fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "p1_data p1_images";
+        grid-gap: 0.5rem;
+        font-family: Poppins;
+        width: 100%;
+    }
+    #p1_images{
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "p1_i1"
+        "p1_i2"
+        "p1_i3"
+        "p1_i4";
+        grid-gap: 0.5rem;
+        font-family: Poppins;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 550px){
+    /* PRODUCT 1: CERVEZA */
+    #p1{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 15fr;
+        grid-template-rows: 2fr;
+        grid-template-areas:
+        "p1_data"
+        "p1_images";
+        grid-gap: 0.5rem;
+        font-family: Poppins;
+        width: 100%;
+    }
+    /* Product 1: Images Container */
+    #p1_images{
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "p1_i1 p1_i2"
+        "p1_i3 p1_i4";
+        grid-gap: 0.5rem;
+        font-family: Poppins;
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* Product 1: General individual images */
+    .image_common{
+        width: 80%;
+    }
+}
